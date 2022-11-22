@@ -1,7 +1,15 @@
+'''
+Written by Deven Kanwal, 11/21/22
+In this script: Evaluate.py is called on by Main.py to output a fitness score for each poem
+that Genpo Supreme composes. The fitness score is the difference between the line with the
+most syllables in a poem and the line with the least. The lower the score, the better.
+'''
+
+
 def syllable_counter(word):
     '''This function counts the syllables in a given word'''
     vowels_plus_y = 'aeiouy'
-    lc_word = word.lower()
+    lc_word = word.lower() #all counting is done in lowercase
     syllables = 0
 
     if lc_word[0] in vowels_plus_y:
