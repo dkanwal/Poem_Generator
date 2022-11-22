@@ -55,5 +55,5 @@ def main():
         else:
             continue
     
-
-main()
+if __name__ == "__main__":
+    main()
