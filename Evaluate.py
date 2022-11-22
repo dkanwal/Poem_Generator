@@ -1,8 +1,9 @@
 '''
 Written by Deven Kanwal, 11/21/22
-In this script: Evaluate.py is called on by Main.py to output a fitness score for each poem
-that Genpo Supreme composes. The fitness score is the difference between the line with the
-most syllables in a poem and the line with the least. The lower the score, the better.
+In this script: Evaluate.py is called on by Main.py to output a fitness score 
+for each poem that Genpo Supreme composes. The fitness score is the difference 
+between the line with the most syllables in a poem and the line with the least. 
+The lower the score, the better.
 '''
 
 

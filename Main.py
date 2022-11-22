@@ -1,7 +1,7 @@
 '''
 Written by Deven Kanwal, 11/21/22.
-In this script: Main.py contains the main() method which drives Genpo Supreme utilizing its three
-helper scripts.
+In this script: Main.py contains the main() method which drives Genpo Supreme 
+utilizing its three helper scripts.
 '''
 
 
@@ -12,8 +12,8 @@ import numpy as np
 import os 
 
 def main():
-    """Program driver. Prompts user for input and returns a saved output poem with optimal fitness, 
-    and reads the poem aloud for the user."""
+    """Program driver. Prompts user for input and returns a saved output poem 
+    with optimal fitness, and reads the poem aloud for the user."""
     num_words_per_line = input("How many words per line?\n")
     num_lines_per_stanza = input("How many lines per stanza?\n")
     num_stanzas = input("How many stanzas would you like the poem to have?\n")
@@ -40,7 +40,8 @@ def main():
     for num in range(0, num_iterations):
         poem = '' #Poem for current iteration
         for i in range(0, int(num_stanzas)):
-            for j in range(0, int(num_lines_per_stanza)): #Building a stanza from user specified number of lines
+            #Building a stanza from user specified number of lines
+            for j in range(0, int(num_lines_per_stanza)): 
                 line = Build_Line.build_line(int(num_words_per_line)) 
                 poem = poem + line + '\n'
             poem = poem + '\n'    
@@ -52,10 +53,13 @@ def main():
         else:
             continue
     
-    '''Writing to the output file bringing together the introduction, poem, and Genpo Supreme's signauture.'''
-    with open("output/test_output", "w") as f:
+    '''Writing to the output file bringing together the introduction, poem, and 
+    Genpo Supreme's signauture.'''
+    
+    with open("output/generated_poem", "w") as f:
         f.write("Poem Fitness: " + str(lowest_fitness) + '\n' + '\n')
-        f.write(introduction + 'Selection number ' + str(iteration_number) + ' out of ' + str(num_iterations) + '.' + '\n' + '\n')
+        f.write(introduction + 'Selection number ' + str(iteration_number) + \
+            ' out of ' + str(num_iterations) + '.' + '\n' + '\n')
         f.write(output_poem + '\n' + '\n')
         f.write("Written by Genpo Supreme")
         f.close()
